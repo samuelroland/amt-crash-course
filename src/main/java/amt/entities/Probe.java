@@ -1,12 +1,21 @@
 package amt.entities;
 
-import java.net.URL;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
 public class Probe {
+    public Probe(String url) {
+        this.url = url;
+    }
+
+    public Probe() {
+    }
+
     @Id
-    private URL url;
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
 }

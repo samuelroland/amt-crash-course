@@ -13,6 +13,11 @@ quarkus ext add io.quarkus:quarkus-jdbc-postgresql
 quarkus ext add io.quarkus:quarkus-hibernate-orm
 ```
 
+Start the server and make sure `localhost:8000/hello` answers.
+```sh
+quarkus dev
+```
+
 Create a class `Probe.java`
 ```java
 public class Probe {
@@ -65,3 +70,9 @@ Changing the `src/main/ressources/application.properties` with this line, we can
 quarkus.datasource.devservices.port=5432
 ```
 
+## ProbeService
+
+We need to annotate `ProbeService` with `@ApplicationScoped` so we can `@Inject` it into `ProbeServiceTest`.
+
+
+more steps undocumented...
